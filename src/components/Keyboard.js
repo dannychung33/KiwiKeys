@@ -54,8 +54,8 @@ function Keyboard(){
         <div className="flex-container">
             <KeyWithSharp note='C3' sharp='C#3'/>
             <KeyWithSharp note='D3' sharp='D#3'/>
-            <KeyWithSharp note='E3' sharp='E#3'/>
-            <Key note='F3'/>
+            <Key note='E3'/>
+            <KeyWithSharp note='F3'sharp='F#3'/>
             <KeyWithSharp note='G3' sharp='G#3'/>
             <KeyWithSharp note='A3' sharp='A#3'/>
             <Key note='B3'/>
