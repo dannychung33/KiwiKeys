@@ -2,6 +2,7 @@ import '../App.css';
 import BlackKey from './BlackKey';
 import {playNote} from './Keyboard';
 import {useState} from 'react';
+import {sampler} from './Keyboard';
 
 function Key(props) {
     let [color, setColor] = useState('#fffff0');
@@ -20,7 +21,15 @@ function Key(props) {
                     setColor('#fffff0');
                 }, 300)
             }
-        }}>
+        }}
+        onMouseUp={(e) => {
+            if(e.target.className !== 'black-key'){
+                console.log('mouse up')
+                sampler.releaseAll();
+            }
+        }}
+        >
+        
         <BlackKey sharp={props.sharp}/>
         </div>
     )

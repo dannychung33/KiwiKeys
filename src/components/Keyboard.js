@@ -4,7 +4,7 @@ import KeyWithSharp from "./KeyWithSharp";
 
 import * as Tone from 'tone';
 
-const volume = new Tone.Volume(0);
+const volume = new Tone.Volume(20);
 
 export const sampler = new Tone.Sampler({
     urls: {
@@ -48,10 +48,8 @@ export function playNote(note){
     console.log(note);
 
     Tone.loaded().then(() => {
-        sampler.triggerAttackRelease(note, 5);
+        sampler.triggerAttack(note);
         sampler.toDestination();
-        //sampler.connect(volume);
-        //volume.toDestination();
     });
     
 }

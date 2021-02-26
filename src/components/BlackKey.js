@@ -1,6 +1,7 @@
 
 import {playNote} from './Keyboard';
 import {useState} from 'react';
+import {sampler} from './Keyboard';
 
 function BlackKey(props){
     let [color, setColor] = useState('#000000');
@@ -14,7 +15,11 @@ function BlackKey(props){
             setTimeout(()=>{
                 setColor('#000000');
             }, 300)
-        }}>
+        }}
+        onMouseUp={() =>{
+            sampler.releaseAll();
+        }}
+        >
             
         </div>
     )
