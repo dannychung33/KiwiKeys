@@ -1,15 +1,5 @@
 import '../App.css';
-import * as Tone from 'tone';
-import {sampler} from './Keyboard';
-
-function playNote(note){
-    console.log(note);
-    Tone.loaded().then(() => {
-        sampler.triggerAttackRelease(note);
-        
-    });
-    
-}
+import {playNote} from './Keyboard';
 
 function Key(props) {
     return(
