@@ -1,5 +1,6 @@
 import '../App.css'
 import Power from './Power'
+import { GiKiwiFruit } from "react-icons/gi";
 
 const Title = () => {
     return(
@@ -8,6 +9,7 @@ const Title = () => {
         Kiwi 
         <Power />
         Keys
+        <GiKiwiFruit/>
     </h3>
     )
 }
