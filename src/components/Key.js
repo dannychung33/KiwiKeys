@@ -1,8 +1,19 @@
 import '../App.css';
+import * as Tone from 'tone';
+import {sampler} from './Keyboard';
 
-function Key() {
+function playNote(note){
+    console.log(note);
+    Tone.loaded().then(() => {
+        sampler.triggerAttackRelease(note);
+        
+    });
+    
+}
+
+function Key(props) {
     return(
-        <div className="key">
+        <div className="key" onClick={()=>playNote(props.note)}>
 
         </div>
     )
