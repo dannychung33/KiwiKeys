@@ -10,7 +10,7 @@ function Key(props) {
         <div 
         className="key-with-sharp" 
         style={{backgroundColor: color}} 
-        onClick={(e)=>{
+        onMouseDown={(e)=>{
             console.log("Event target: " + e.target.className);
             
             if(e.target.className !== 'black-key'){

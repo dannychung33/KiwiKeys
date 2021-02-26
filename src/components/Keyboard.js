@@ -44,7 +44,7 @@ export const sampler = new Tone.Sampler({
 export function playNote(note){
     console.log(note);
     Tone.loaded().then(() => {
-        sampler.triggerAttackRelease(note);
+        sampler.triggerAttackRelease(note, 5);
         
     });
     
