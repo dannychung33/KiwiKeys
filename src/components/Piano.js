@@ -1,13 +1,13 @@
-
+import Title from "./Title";
 import Keyboard from "./Keyboard";
 import VolumeSlider from "./VolumeSlider";
 import Drumpad from "./Drumpad";
 import '../App.css';
-
+// is this where we get the pressed key?
 function Piano(){
     return( 
     <div className="piano">
-        <h3 style={{color:"yellowgreen"}}>Kiwiano</h3>
+        <Title />
         <Drumpad/>
         <VolumeSlider/>
         <Keyboard/>
