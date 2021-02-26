@@ -8,7 +8,7 @@ function BlackKey(props){
         <div 
         className="black-key" 
         style={{backgroundColor: color}}
-        onClick={()=>{
+        onMouseDown={()=>{
             playNote(props.sharp)
             setColor('#ADD8E6');  
             setTimeout(()=>{

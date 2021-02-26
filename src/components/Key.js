@@ -6,7 +6,7 @@ function Key(props) {
     let [color, setColor] = useState('#fffff0');
 
     return(
-        <div className="key" style={{backgroundColor: color}} onClick={(e)=>
+        <div className="key" style={{backgroundColor: color}} onMouseDown={(e)=>
         {
             console.log("Event target: " + e.target.className)
             setColor('#ADD8E6');

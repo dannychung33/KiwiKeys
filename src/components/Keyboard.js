@@ -4,6 +4,8 @@ import KeyWithSharp from "./KeyWithSharp";
 
 import * as Tone from 'tone';
 
+const volume = new Tone.Volume(0);
+
 export const sampler = new Tone.Sampler({
     urls: {
         A0: "A0.mp3",
@@ -39,16 +41,21 @@ export const sampler = new Tone.Sampler({
     },
     release: 1,
     baseUrl: "https://tonejs.github.io/audio/salamander/",
-}).toDestination();
+    volume: 0
+})
 
 export function playNote(note){
     console.log(note);
+
     Tone.loaded().then(() => {
         sampler.triggerAttackRelease(note, 5);
-        
+        sampler.toDestination();
+        //sampler.connect(volume);
+        //volume.toDestination();
     });
     
 }
+
 function Keyboard(){
     return(
         <div className="flex-container">
