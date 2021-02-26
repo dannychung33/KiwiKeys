@@ -1,14 +1,14 @@
 import '../App.css';
 function VolumeSlider(){
     return(
-        <div class="volume_slider">
+        <div className="volume_slider">
         <span className="volume_label">Volume: </span>
         <input
           type="range"
           min="0.0"
           max="1.0"
           step="0.01"
-          value="0.5"
+          defaultValue="0.5"
           list="volumes"
           name="volume"
         />
