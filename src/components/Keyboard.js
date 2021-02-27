@@ -48,6 +48,7 @@ export function playNote(note){
     Tone.loaded().then(() => {
         sampler.triggerAttack(note);
         console.log("Sampler vol: " + volume);
+        // eslint-disable-next-line
         if(volume == -30){
             sampler.volume.value = -100;
         }
@@ -62,6 +63,14 @@ export function playNote(note){
 function Keyboard(){
     return(
         <div className="flex-container">
+            <KeyWithSharp note='C2' sharp='C#2'/>
+            <KeyWithSharp note='D2' sharp='D#2'/>
+            <Key note='E2'/>
+            <KeyWithSharp note='F2'sharp='F#2'/>
+            <KeyWithSharp note='G2' sharp='G#2'/>
+            <KeyWithSharp note='A2' sharp='A#2'/>
+            <Key note='B2'/>
+
             <KeyWithSharp note='C3' sharp='C#3'/>
             <KeyWithSharp note='D3' sharp='D#3'/>
             <Key note='E3'/>
@@ -69,7 +78,32 @@ function Keyboard(){
             <KeyWithSharp note='G3' sharp='G#3'/>
             <KeyWithSharp note='A3' sharp='A#3'/>
             <Key note='B3'/>
-            <Key note='C4'/>
+
+            <KeyWithSharp note='C4' sharp='C#4'/>
+            <KeyWithSharp note='D4' sharp='D#4'/>
+            <Key note='E4'/>
+            <KeyWithSharp note='F4'sharp='F#4'/>
+            <KeyWithSharp note='G4' sharp='G#4'/>
+            <KeyWithSharp note='A4' sharp='A#4'/>
+            <Key note='B4'/>
+
+            <KeyWithSharp note='C5' sharp='C#5'/>
+            <KeyWithSharp note='D5' sharp='D#5'/>
+            <Key note='E5'/>
+            <KeyWithSharp note='F5'sharp='F#5'/>
+            <KeyWithSharp note='G5' sharp='G#5'/>
+            <KeyWithSharp note='A5' sharp='A#5'/>
+            <Key note='B5'/>
+
+            <KeyWithSharp note='C6' sharp='C#6'/>
+            <KeyWithSharp note='D6' sharp='D#6'/>
+            <Key note='E6'/>
+            <KeyWithSharp note='F6'sharp='F#6'/>
+            <KeyWithSharp note='G6' sharp='G#6'/>
+            <KeyWithSharp note='A6' sharp='A#6'/>
+            <Key note='B6'/>
+
+            <Key note='B7'/>
         </div>
     )
 }

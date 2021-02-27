@@ -37,21 +37,21 @@
   }
 }
 .title {
-  color:"yellowgreen";
+  color: "yellowgreen";
   font-style: italic;
 }
 .powerButton {
-  cursor: pointer; 
-  background-color: transparent; 
-  color: #3498db; 
+  cursor: pointer;
+  background-color: transparent;
+  color: #3498db;
   border-radius: 50%;
-  font-size: 1em; 
-  box-shadow: 0 6px 6px rgba(11, 29, 5, 0.6); 
+  font-size: 1em;
+  box-shadow: 0 6px 6px rgba(11, 29, 5, 0.6);
 }
 .piano {
   position: absolute;
   margin-top: 250px;
-  margin-left: 20%;
+  margin-left: 0%;
   background-color: #734b43;
   padding-top: 0px;
   padding-left: 20px;
@@ -64,7 +64,7 @@
 }
 .key {
   position: relative;
-  width: 60px;
+  width: 40px;
   height: 180px;
   border: 1px solid black;
   border-right: none;
@@ -80,7 +80,7 @@
 }
 .key-with-sharp {
   position: relative;
-  width: 60px;
+  width: 40px;
   height: 180px;
   border: 1px solid black;
   border-right: none;
@@ -97,8 +97,8 @@
 .black-key {
   position: relative;
   top: -51px;
-  left: 31px;
-  width: 40px;
+  left: 20px;
+  width: 27px;
   height: 120px;
   background: black;
   border-radius: 5px;

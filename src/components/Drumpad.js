@@ -20,8 +20,8 @@ function playSynth() {
 }
 
 function playKiwi() {
+    // eslint-disable-next-line
     if(isOn == false) { 
-        
         player.toDestination();
         Tone.loaded().then(() => {
             player.start();
