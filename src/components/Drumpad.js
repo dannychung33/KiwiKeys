@@ -8,6 +8,7 @@ import './drumpad.css';
 const Synth = new Tone.MembraneSynth();  
 const isPingPongOff = false
 const pingPong = new Tone.PingPongDelay("4n", 0.4).toDestination();
+const player = new Tone.Player("https://tippi-fifestarr.github.io/Present/ipsum-navajobeat(0).wav");
 
 function playSynth() {
     if (isPingPongOff) {
@@ -18,12 +19,20 @@ function playSynth() {
 }
 
 function playKiwi() {
-    const player = new Tone.Player("https://tippi-fifestarr.github.io/Present/ipsum-navajobeat(0).wav").toDestination();
+    if(isOn == false) { 
+        
+        player.toDestination();
+        Tone.loaded().then(() => {
+            player.start();
+        });
+        isOn = true;
+        console.log(isOn);
+    } else {
+        player.stop();
+        isOn = false;
+        console.log(isOn);
+    }
     
-    Tone.loaded().then(() => {
-	player.start();
-    
-});
 }
 
 const Drumpad = () => {
