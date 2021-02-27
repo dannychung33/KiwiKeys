@@ -9,6 +9,7 @@ const Synth = new Tone.MembraneSynth();
 const isPingPongOff = false
 const pingPong = new Tone.PingPongDelay("4n", 0.4).toDestination();
 const player = new Tone.Player("https://tippi-fifestarr.github.io/Present/ipsum-navajobeat(0).wav");
+var isOn = false;
 
 function playSynth() {
     if (isPingPongOff) {
