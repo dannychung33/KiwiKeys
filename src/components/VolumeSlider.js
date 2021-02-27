@@ -1,14 +1,25 @@
 import '../App.css';
+
+
+export let volume = "0";
+
+function updateVolume(vol){
+  volume = vol;
+}
+
 function VolumeSlider(){
+
     return(
-        <div className="volume_slider">
+        <div>
         <span className="volume_label">Volume: </span>
         <input
+          className="volume_slider"
           type="range"
-          min="0.0"
-          max="1.0"
-          step="0.01"
-          defaultValue="0.5"
+          min="-30"
+          max="30"
+          step="1"
+          defaultValue="0"
+          onChange={(e) => {updateVolume(e.target.value)}}
           list="volumes"
           name="volume"
         />

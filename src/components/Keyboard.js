@@ -3,8 +3,7 @@ import Key from "./Key";
 import KeyWithSharp from "./KeyWithSharp";
 
 import * as Tone from 'tone';
-
-const volume = new Tone.Volume(20);
+import {volume} from './VolumeSlider';
 
 export const sampler = new Tone.Sampler({
     urls: {
@@ -40,8 +39,7 @@ export const sampler = new Tone.Sampler({
         C8: "C8.mp3"
     },
     release: 1,
-    baseUrl: "https://tonejs.github.io/audio/salamander/",
-    volume: 0
+    baseUrl: "https://tonejs.github.io/audio/salamander/"
 })
 
 export function playNote(note){
@@ -49,6 +47,13 @@ export function playNote(note){
 
     Tone.loaded().then(() => {
         sampler.triggerAttack(note);
+        console.log("Sampler vol: " + volume);
+        if(volume == -30){
+            sampler.volume.value = -100;
+        }
+        else{
+            sampler.volume.value = volume;
+        }
         sampler.toDestination();
     });
     
