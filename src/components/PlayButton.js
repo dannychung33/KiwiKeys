@@ -6,65 +6,65 @@ var synth = new Tone.Synth().toMaster();
 
 const songNotesMelody = [
     {"time": 0, "note": "E5", "duration": "16n"},
-    {"time": 0.16, "note": "D#5", "duration": "16n"},
-    {"time": 0.32, "note": "E5", "duration": "16n"},
-    {"time": 0.48, "note": "D#5", "duration": "16n"},
-    {"time": 0.64, "note": "E5", "duration": "16n"},
-    {"time": 0.8, "note": "B4", "duration": "16n"},
-    {"time": 0.96, "note": "D5", "duration": "16n"},
-    {"time": 1.12, "note": "C5", "duration": "16n"},
-    {"time": 1.28, "note": "A4", "duration": "8n"},
+    {"time": 0.16 * 2, "note": "D#5", "duration": "16n"},
+    {"time": 0.32 * 2, "note": "E5", "duration": "16n"},
+    {"time": 0.48 * 2, "note": "D#5", "duration": "16n"},
+    {"time": 0.64 * 2, "note": "E5", "duration": "16n"},
+    {"time": 0.8 * 2, "note": "B4", "duration": "16n"},
+    {"time": 0.96 * 2, "note": "D5", "duration": "16n"},
+    {"time": 1.12 * 2, "note": "C5", "duration": "16n"},
+    {"time": 1.28 * 2, "note": "A4", "duration": "8n"},
 
-    {"time": 1.28, "note": "A3", "duration": "16n"},
-    {"time": 1.44, "note": "E3", "duration": "16n"},
-    {"time": 1.6, "note": "A4", "duration": "16n"},
+    {"time": 1.28 * 2, "note": "A3", "duration": "16n"},
+    {"time": 1.44 * 2, "note": "E3", "duration": "16n"},
+    {"time": 1.6 * 2, "note": "A4", "duration": "16n"},
 
-    {"time": 1.76, "note": "C4", "duration": "16n"},
-    {"time": 1.92, "note": "E4", "duration": "16n"},
-    {"time": 2.08, "note": "A4", "duration": "16n"},
-    {"time": 2.24, "note": "B4", "duration": "8n"},
+    {"time": 1.76 * 2, "note": "C4", "duration": "16n"},
+    {"time": 1.92 * 2, "note": "E4", "duration": "16n"},
+    {"time": 2.08 * 2, "note": "A4", "duration": "16n"},
+    {"time": 2.24 * 2, "note": "B4", "duration": "8n"},
 
-    {"time": 2.24, "note": "E2", "duration": "16n"},
-    {"time": 2.4, "note": "E3", "duration": "16n"},
-    {"time": 2.56, "note": "G#3", "duration": "16n"},
+    {"time": 2.24 * 2, "note": "E2", "duration": "16n"},
+    {"time": 2.4 * 2, "note": "E3", "duration": "16n"},
+    {"time": 2.56 * 2, "note": "G#3", "duration": "16n"},
 
-    {"time": 2.72, "note": "E4", "duration": "16n"},
-    {"time": 2.88, "note": "G#4", "duration": "16n"},
-    {"time": 3.04, "note": "B4", "duration": "16n"},
-    {"time": 3.20, "note": "C5", "duration": "8n"},
+    {"time": 2.72 * 2, "note": "E4", "duration": "16n"},
+    {"time": 2.88 * 2, "note": "G#4", "duration": "16n"},
+    {"time": 3.04 * 2, "note": "B4", "duration": "16n"},
+    {"time": 3.20 * 2, "note": "C5", "duration": "8n"},
 
-    {"time": 3.20, "note": "A2", "duration": "16n"},
-    {"time": 3.36, "note": "E3", "duration": "16n"},
-    {"time": 3.52, "note": "A3", "duration": "16n"},
+    {"time": 3.20 * 2, "note": "A2", "duration": "16n"},
+    {"time": 3.36 * 2, "note": "E3", "duration": "16n"},
+    {"time": 3.52 * 2, "note": "A3", "duration": "16n"},
 
-    {"time": 3.68, "note": "E4", "duration": "16n"},
-    {"time": 3.84, "note": "E5", "duration": "16n"},
-    {"time": 4, "note": "D#5", "duration": "16n"},
-    {"time": 4.16, "note": "E5", "duration": "16n"},
-    {"time": 4.32, "note": "D#5", "duration": "16n"},
-    {"time": 4.48, "note": "E5", "duration": "16n"},
-    {"time": 4.64, "note": "B4", "duration": "16n"},
-    {"time": 4.82, "note": "D5", "duration": "16n"},
-    {"time": 4.96, "note": "C5", "duration": "16n"},
-    {"time": 5.12, "note": "A4", "duration": "8n"},
+    {"time": 3.68 * 2, "note": "E4", "duration": "16n"},
+    {"time": 3.84 * 2, "note": "E5", "duration": "16n"},
+    {"time": 4 * 2, "note": "D#5", "duration": "16n"},
+    {"time": 4.16 * 2, "note": "E5", "duration": "16n"},
+    {"time": 4.32 * 2, "note": "D#5", "duration": "16n"},
+    {"time": 4.48 * 2, "note": "E5", "duration": "16n"},
+    {"time": 4.64 * 2, "note": "B4", "duration": "16n"},
+    {"time": 4.82 * 2, "note": "D5", "duration": "16n"},
+    {"time": 4.96 * 2, "note": "C5", "duration": "16n"},
+    {"time": 5.12 * 2, "note": "A4", "duration": "8n"},
 
-    {"time": 5.12, "note": "A3", "duration": "16n"},
-    {"time": 5.28, "note": "E3", "duration": "16n"},
-    {"time": 5.44, "note": "A4", "duration": "16n"},
+    {"time": 5.12 * 2, "note": "A3", "duration": "16n"},
+    {"time": 5.28 * 2, "note": "E3", "duration": "16n"},
+    {"time": 5.44  * 2, "note": "A4", "duration": "16n"},
 
-    {"time": 5.6, "note": "C4", "duration": "16n"},
-    {"time": 5.76, "note": "E4", "duration": "16n"},
-    {"time": 5.92, "note": "A4", "duration": "16n"},
-    {"time": 6.08, "note": "B4", "duration": "8n"},
+    {"time": 5.6 * 2, "note": "C4", "duration": "16n"},
+    {"time": 5.76 * 2, "note": "E4", "duration": "16n"},
+    {"time": 5.92 * 2, "note": "A4", "duration": "16n"},
+    {"time": 6.08 * 2, "note": "B4", "duration": "8n"},
 
-    {"time": 6.08, "note": "E2", "duration": "16n"},
-    {"time": 6.16, "note": "E3", "duration": "16n"},
-    {"time": 6.32, "note": "G#3", "duration": "16n"},
+    {"time": 6.08 * 2, "note": "E2", "duration": "16n"},
+    {"time": 6.16 * 2, "note": "E3", "duration": "16n"},
+    {"time": 6.32 * 2, "note": "G#3", "duration": "16n"},
 
-    {"time": 6.48, "note": "B3", "duration": "16n"},
-    {"time": 6.72, "note": "C5", "duration": "16n"},
-    {"time": 6.88, "note": "B4", "duration": "16n"},
-    {"time": 7.04, "note": "A4", "duration": "4n"},
+    {"time": 6.48 * 2, "note": "B3", "duration": "16n"},
+    {"time": 6.72 * 2, "note": "C5", "duration": "16n"},
+    {"time": 6.88 * 2, "note": "B4", "duration": "16n"},
+    {"time": 7.04 * 2, "note": "A4", "duration": "4n"},
     
     
     
@@ -120,11 +120,11 @@ function playSong(notes, harmony){
 }
 
 function playMusic(){
-    var part = new Tone.Part(function(time, note){
+    new Tone.Part(function(time, note){
         //the notes given as the second element in the array
         //will be passed in as the second argument
         console.log(note);
-        synth.triggerAttackRelease(note.note, note.duration, time);
+        sampler.triggerAttackRelease(note.note, note.duration, time);
     }, songNotesMelody).start(0);
 
     Tone.Transport.start();
