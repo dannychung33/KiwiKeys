@@ -24,7 +24,6 @@ function Key(props) {
         }}
         onMouseUp={(e) => {
             if(e.target.className !== 'black-key'){
-                console.log('mouse up')
                 sampler.releaseAll();
             }
         }}
